@@ -1,0 +1,159 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@font-face {
+    font-family: roboto;
+    src: url(assets/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: roboto-bold;
+    src: url(assets/fonts/Roboto-Bold.ttf);
+}
+* {
+    font-family: roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(234, 29%, 20%);
+}
+#sign-upForm {
+    display: flex;
+    justify-content: start;
+    background-color: #fff;
+    width: 50%;
+    height: fit-content;
+    padding: 26px;
+    border-radius: 50px;
+
+
+}
+.sign-up {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 48px;
+}
+h1 {
+    font-family: roboto-bold;
+    font-weight: 700;
+    font-size: 3vw;
+    margin: 10% 0px;
+}
+.benefits-list {
+    margin: 5% 0px;
+    list-style: none;
+}
+.icon-list {
+    margin-right: 10px;
+}
+.benefits-list-item {
+    display: flex;
+    margin: 10px 0;
+}
+input {
+    display: block;
+    width: 100%;
+    margin: 5% 0px;
+    padding: 10px;
+    border: #00000050 solid 1px;
+    border-radius: 5px;
+}
+input:active {
+    border: #000 solid 1px;
+}
+#errorMessage {
+    font-size: 16px;
+    display: none;
+    color: red;
+    float:right;
+}
+button {
+    text-align: center;
+    padding: 5%;
+    margin: 5% 0;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(235, 18%, 26%);
+    color: #fff;
+    width: 100%;
+    font-family: roboto, sans-serif;
+    font-weight: 700;
+    transition: 600ms;
+}
+
+button:hover {
+    background: linear-gradient(90deg, hsl(4, 100%, 67%), rgb(255, 137, 87));
+    box-shadow: 10px 10px 20px 10px hsla(4, 100%, 67%, 20%);
+}
+.illustration-sign-up {
+    height: 100%;
+    width: 50%;
+}
+.illustration-sign-up-mobile {
+    display: none;
+    width: 100%;
+}
+#successMessage {
+    display: none;
+    flex-direction: column;
+
+    width: 35vw;
+    height: 35vw;
+    padding: 5vw;
+    background-color: #fff;
+    border-radius: 40px;
+}
+.icon-success {
+    width: 75px;
+}
+.successMessage-header {
+    margin: 5% 0;
+}
+
+@media (max-width:801px) {
+    * {
+        font-size: 16px;
+    }
+    body {
+        display: block;
+    }
+    #sign-upForm {
+        flex-direction: column-reverse;
+        width: 100%;
+        border-radius: 0px;
+        padding: 0px;
+    }
+    .sign-up {
+        padding: 10vw;
+    }
+    .illustration-sign-up {
+        display: none;
+    }
+    .illustration-sign-up-mobile {
+        display: block;
+    }
+    h1 {
+        margin: 5vw 0;
+        font-size: 10vw;
+    }
+    #successMessage {
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+    #dismissButton {
+        margin-top: 50%;
+    }
+}
